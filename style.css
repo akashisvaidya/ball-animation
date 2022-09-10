@@ -1,0 +1,106 @@
+body {
+  /* position: relative; */
+}
+.container {
+  background: blue;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.parent {
+  background: #000;
+  color: white;
+  width: 60vw;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+
+  animation: spin 5s reverse;
+}
+.ball {
+  background: radial-gradient(white, red);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  /* animation: name duration iteration-count direction ; */
+
+  /* animation: circle 5s; */
+
+  /* animation: forspin 5s; */
+}
+.keep {
+  position: absolute;
+  color: white;
+
+  animation: text 5s alternate-reverse;
+}
+
+@keyframes circle {
+  0% {
+    top: 70px;
+    left: 70px;
+  }
+  25% {
+    top: 50px;
+    left: 75vw;
+  }
+
+  50% {
+    top: 80vh;
+    left: 75vw;
+  }
+
+  80% {
+    top: 80vh;
+    left: 75px;
+  }
+  /* 100% {
+    top: 1vh;
+    left: 70px;
+  }*/
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* @keyframes forspin {
+  0% {
+    top: 150px;
+    left: 150px;
+  }
+
+  25% {
+    top: 545px;
+    left: 150px;
+  }
+} */
+
+@keyframes text {
+  from {
+    transform: rotate(none);
+  }
+
+  to {
+    transform: rotate(none);
+  }
+}
